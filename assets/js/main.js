@@ -1,3 +1,5 @@
+/* === Count date === */
+
 // Constant variables
 const ONE_MINUTE_IN_SECONDS = 60;
 const ONE_HOUR_IN_SECONDS = ONE_MINUTE_IN_SECONDS * 60;
@@ -9,9 +11,7 @@ var type = "inRelation";
 const { floor, abs } = Math;
 
 // Export
-module.exports = {
-  calculate
-};
+
 
 function calculate(type, currentDate = new Date()) {
     // Format: year, date, month-1, hour, minute, second
@@ -140,4 +140,23 @@ function appendZeros(number) {
   }
 
   return `${number}`;
-}
+};
+
+const container = document.querySelector(".cardx-container");
+const card = document.querySelector(".cardx");
+
+container.addEventListener("mousemove",(e)=>{
+  const xPos = (window.innerWidth /2 - e.pageX) / 10;
+  const yPos = (window.innerHeight /2 - e.pageY) / 10;
+  
+  card.style.transform = `rotateX(${yPos}deg) rotateY(${xPos}deg)`;
+})
+
+container.addEventListener("mouseenter", (e)=>{
+  card.style.transition = "none";
+})
+
+container.addEventListener("mouseleave",(e)=>{
+  card.style.transition = "transform 0.3s";
+  card.style.transform = "none";
+})

@@ -1,0 +1,91 @@
+/* Global Variables */
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: floralwhite;
+}
+
+/* General container */
+.container{
+  height: 100vh;
+}
+
+.container h2{
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin:0 ;
+}
+
+.countup-detail span.h2{
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Count up section */
+.countup-date{
+  margin: 20px 0;
+}
+
+.date-wrapper {
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  margin: 0.2rem;
+  background-color: #1b1f24;
+}
+
+.date-value,
+.date-unit {
+  font-family: 'Poppins';
+  color: white;
+}
+
+.date-value {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+}
+
+.date-unit {
+  font-size: 1rem;
+}
+
+.radio-toolbar{
+  margin-bottom: 10px;
+}
+
+.radio-toolbar input[type="radio"] {
+  display: none;
+}
+
+.radio-toolbar label {
+  background-color: #ddd;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+  background-color: darkgrey;
+}
+
+.cardx-container{
+  perspective:700px;
+  display:grid;
+  place-items:center;
+}
+
+.cardx{
+  width:250px;
+  height:350px;
+  background-image:url("https://polypane.app/static/e98b34625bfeefaf638e6c795b9ee053/88a53/overview-dark.webp");
+  background-size:cover;
+  background-position:center;
+  border-radius:10px;
+  cursor:pointer;
+  box-shadow:0 0 100px 5px rgba(63,127,242,0.2);
+}
