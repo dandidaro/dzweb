@@ -2,73 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
     <link href="./images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <title>Dandi Darojat - WebDev</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="jscript.js"></script>
+    <title>dz Web</title>
 </head>
 <body>
     <!-- Navbar -->
-
-    <!-- Header -->
-    <div class="introduction">
-        <div class="profile">
-            <img class="pic" alt="Dandi's photo" src="./images/prof-pic.jpg"/>
-            <div class="summary">
-                <h1>M. Dandi Darojat</h1>
-                <p><span class="highlight">UI Design </span> • Self-taught
-                    <span class="highlight">Web Developer</span></p>
+    
+    <!-- Section 1 - Count up -->
+    <div class="section">
+        <div class="h2">This is how much time we've spent together...</div>
+        <div class="row">
+            <div class="radio-toolbar">
+                <input type="radio" id="radio1" name="choose-date" value="inRelation" checked>
+                <label for="radio1">In Relationship</label>
+              
+                <input type="radio" id="radio2" name="choose-date" value="firstMatch">
+                <label for="radio2">First Match</label>
             </div>
         </div>
-        <div class="about">
-            <p>Nice to meet you! I'm a self-taught WebDev based in Jakarta, Indonesia 💻</p>
+
+        <div class="row">
+            <div class="DTwrapper">
+                <div class="DTvalue" id="years"></div>
+                <div class="DTunit">years</div>
+            </div>
+            <div class="DTwrapper">
+                <div class="DTvalue" id="months"></div>
+                <div class="DTunit">months</div>
+            </div>
+            <div class="DTwrapper">
+                <div class="DTvalue" id="days"></div>
+                <div class="DTunit">days</div>
+            </div>
+            <div class="DTwrapper">
+                <div class="DTvalue" id="hours"></div>
+                <div class="DTunit">hours</div>
+            </div>
+            <div class="DTwrapper">
+                <div class="DTvalue" id="minutes"></div>
+                <div class="DTunit">minutes</div>
+            </div>
+            <div class="DTwrapper">
+                <div class="DTvalue" id="seconds"></div>
+                <div class="DTunit">seconds</div>
+            </div>
         </div>
-        <div class="actions">
-            <a href="./about.html" class="button primary">About Me</a>
-            <a href="https://dandidaro.webflow.io" class="button subtle" target="_blank">Design Portfolio</a>            
-        </div>
+        <div>Calculated since <span class="h2" id="defaultDate"></span></div>
     </div>
 
-    <!-- Selected Projects -->
+    <!-- Section 2 - Other Important Dates -->
     <div class="section">
-        <h2>Selected Projects</h2>
-        <div class="selected-projects">
-            <a class="card">
-                <img src="./images/placeholder.jpg">
-                <div class="desc">
-                    <h3>Coming soon!</h3>
-                    <p>Study Case</p>
-                </div>
-            </a>
-            <a class="card">
-                <img src="./images/placeholder.jpg">
-                <div class="desc">
-                    <h3>Coming soon!</h3>
-                    <p>Study Case</p>
-                </div>
-            </a>
+        <div class="h2">Other Trivial Dates</div>
+        <div class="row">
+            
         </div>
     </div>
 
-    <!-- CTA -->
-    <div class="cta">
-        <h1>Let's Collaborate ✨</h1>
-        <p>Wondering what we can achieve if we work together?</p>
-        <div class="socmed">
-            <a target="_blank" href="https://www.linkedin.com/in/dandidaro/"><img src="./images/linkedin.svg"></a>
-            <a target="_blank" href="mailto:dandidaro@gmail.com?subject=Hi%2C%20Dandi!%20Let's%20work%20together!"><img src="./images/email.svg"></a>
-            <a target="_blank" href="https://dribbble.com/dandidaro"><img src="./images/dribbble.svg"></a>
+    <!-- Section 3 - Memories -->
+    <div class="section">
+        <div class="title">Memories</div>
+        <div class="row">
+            <div class="item modal-toggle" data-target="openMemoryModal" data-id="sarijan-part-2">
+                <div class="polaroid"><img src="https://image.ibb.co/b8UJBc/administration_architecture_big_ben_221166.jpg">
+                  <div class="caption">Sarijan Part 2</div>
+                </div>
+            </div>
+            
+            <div class="item modal-toggle" data-target="openMemoryModal" data-id="sarijan-part-2">
+                <div class="polaroid"><img src="https://image.ibb.co/mmyvrc/anniversary_balloons_birthday_68369.jpg">
+                <div class="caption">Surabaya Part 1</div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="polaroid"><img src="https://image.ibb.co/hQaarc/antique_blur_camera_828378.jpg">
+                <div class="caption">Vintage life </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="polaroid"><img src="https://image.ibb.co/crFarc/pexels_photo_100756.jpg">
+                <div class="caption">Summer Day</div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="polaroid"><img src="https://image.ibb.co/fvekrc/action_adult_art_673649.jpg">
+                <div class="caption">Art</div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="polaroid"><img src="https://image.ibb.co/fvekrc/action_adult_art_673649.jpg">
+                <div class="caption">Art</div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="polaroid"><img src="https://image.ibb.co/fvekrc/action_adult_art_673649.jpg">
+                <div class="caption">Art</div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        © 2023 Dandi Darojat
+        © 2024 dandidaro, made with ❤️
     </footer>
 
-    <!-- This is full hand-made using pure HTML and CSS. Just inpect and copy if you like the style, color, etc -->
+    <!-- Modal for Polaroid -->
+    <div id="openMemoryModal" class="modal-wrapper">
+        <div class="modal">
+            <a href="#close" title="Close" class="close">X</a>
+            <div class="modal-title">Dynamic Modals</div>
+            <div class="modal-content">
+                <iframe id="memory-iframe" src="./index.html"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- On load scripts -->
+    <script>
+        // Get selected radio button in important dates
+        var type = "inRelation"
+        document.querySelector("div.radio-toolbar").addEventListener("click", function(evt){
+            if (evt.target.type === "radio"){
+                type = evt.target.value;
+            }
+        });
+
+        // Change date calculation based on radio button
+        window.addEventListener('load', () => {
+            const result = calculate(type);
+            render(result);
+
+            setInterval(() => {
+                render(calculate(type));
+            }, 1000);
+        });
+
+        // Close Modal JS
+        var closeButton = document.querySelectorAll(".close");
+        for (i = 0; i < closeButton.length; i++) {
+            closeButton[i].addEventListener("click", function() {
+                var dia = this.parentNode.parentNode;
+                dia.style.opacity = 0;
+                dia.style.zIndex = -1;
+            });
+        };
+
+        // Open Modal JS
+        var modalTrigger = document.querySelectorAll("div.modal-toggle");
+        for (i = 0; i < modalTrigger.length; i++) {
+            modalTrigger[i].addEventListener("click", function() {
+                var targetId = this.getAttribute("data-target");
+                var target = document.getElementById(targetId);
+                var title = this.getElementsByClassName("caption");
+
+                var newFrameSrc = "./memories/" + this.getAttribute("data-id") + ".html";
+                document.getElementById("memory-iframe").src = newFrameSrc;
+
+                var newTitle = title[0].innerText;
+                target.getElementsByClassName("modal-title")[0].innerText = newTitle;
+
+                target.style.opacity = 1;
+                target.style.zIndex = 9999;
+            });
+        };
+
+    </script>
+
+    <!-- Created By Dans. Just inpect and copy if you like the style, color, etc -->
 </body>
 </html>
