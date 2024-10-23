@@ -142,21 +142,16 @@ function appendZeros(number) {
   return `${number}`;
 };
 
-const container = document.querySelector(".cardx-container");
-const card = document.querySelector(".cardx");
 
-container.addEventListener("mousemove",(e)=>{
-  const xPos = (window.innerWidth /2 - e.pageX) / 10;
-  const yPos = (window.innerHeight /2 - e.pageY) / 10;
-  
-  card.style.transform = `rotateX(${yPos}deg) rotateY(${xPos}deg)`;
-})
+/* === Dynamic modal === */
+var modalTitle = document.querySelector('.modal-title');
 
-container.addEventListener("mouseenter", (e)=>{
-  card.style.transition = "none";
-})
+$('.modalMemory').on('click',function(){
+  var newTitle = this.getAttribute('data-title');
+  var newContent = this.getAttribute('data-content');
 
-container.addEventListener("mouseleave",(e)=>{
-  card.style.transition = "transform 0.3s";
-  card.style.transform = "none";
-})
+  modalTitle.innerHTML = newTitle;
+  $('.modal-body').load('memories/' + newContent + '.html',function(){
+    $('#myModal').modal({show:true});
+  });
+});
