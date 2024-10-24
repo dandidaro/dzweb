@@ -29,7 +29,7 @@ body {
   font-weight: 700;
 }
 
-/* === Hero section === */
+/* === Section 1 - Hero === */
 .hero h2{
   font-family: var(--bodoni-moda);
   font-weight: 800;
@@ -43,7 +43,7 @@ body {
   color: #363638;
 }
 
-/* === Count up section === */
+/* === Section 2 - Count up === */
 .count-up{
   padding: 0;
 }
@@ -103,7 +103,7 @@ body {
   background-color: #fdc3c3;
 }
 
-/* === Section # - Trivial dates === */
+/* === Section 3 - Trivial dates === */
 .trivial-dates,
 .calendar,
 .date-row {
@@ -188,7 +188,7 @@ body {
   color: #363638;
 }
 
-/* === Section # - Memories of === */
+/* === Section 4 - Memories of === */
 
 .memories h2{
   padding-bottom: 20px;
