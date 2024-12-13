@@ -12,22 +12,21 @@ const { floor, abs } = Math;
 
 // Export
 
-
 function calculate(type, currentDate = new Date()) {
-    // Format: year, date, month-1, hour, minute, second
-    
-    if (type === "inRelation"){
-        INPUT_DATE = new Date(2021, 6, 6, 21, 5, 33);
-    } else if (type === "firstMatch") {
-        INPUT_DATE = new Date(2021, 5, 8, 1, 0, 0);
-    }
-    
-    let years;
-    let months;
-    let days;
-    let hours;
-    let minutes;
-    let seconds;
+  // Format: year, date, month-1, hour, minute, second
+
+  if (type === "inRelation") {
+    INPUT_DATE = new Date(2021, 6, 6, 21, 5, 33);
+  } else if (type === "firstMatch") {
+    INPUT_DATE = new Date(2021, 5, 8, 1, 0, 0);
+  }
+
+  let years;
+  let months;
+  let days;
+  let hours;
+  let minutes;
+  let seconds;
 
   // Get raw time
   const gapMilliSeconds = INPUT_DATE.getTime();
@@ -100,31 +99,32 @@ function calculate(type, currentDate = new Date()) {
 }
 
 function render({ years, months, days, hours, minutes, seconds }) {
-    // Fill into the divs
-    var options = { weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    hour:'numeric',
-                    minute: 'numeric',
-                    hour12: false
-                };
+  // Fill into the divs
+  var options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: false,
+  };
 
-    const yearsDiv = document.getElementById('years');
-    const monthsDiv = document.getElementById('months');
-    const daysDiv = document.getElementById('days');
-    const hoursDiv = document.getElementById('hours');
-    const minutesDiv = document.getElementById('minutes');
-    const secondsDiv = document.getElementById('seconds');
-    const defDateDiv = document.getElementById('defaultDate');
+  const yearsDiv = document.getElementById("years");
+  const monthsDiv = document.getElementById("months");
+  const daysDiv = document.getElementById("days");
+  const hoursDiv = document.getElementById("hours");
+  const minutesDiv = document.getElementById("minutes");
+  const secondsDiv = document.getElementById("seconds");
+  const defDateDiv = document.getElementById("defaultDate");
 
-    yearsDiv.innerHTML = appendZeros(years);
-    monthsDiv.innerHTML = appendZeros(months);
-    daysDiv.innerHTML = appendZeros(days);
-    hoursDiv.innerHTML = appendZeros(hours);
-    minutesDiv.innerHTML = appendZeros(minutes);
-    secondsDiv.innerHTML = appendZeros(seconds);
-    defDateDiv.innerHTML = INPUT_DATE.toLocaleDateString("en-US", options);
+  yearsDiv.innerHTML = appendZeros(years);
+  monthsDiv.innerHTML = appendZeros(months);
+  daysDiv.innerHTML = appendZeros(days);
+  hoursDiv.innerHTML = appendZeros(hours);
+  minutesDiv.innerHTML = appendZeros(minutes);
+  secondsDiv.innerHTML = appendZeros(seconds);
+  defDateDiv.innerHTML = INPUT_DATE.toLocaleDateString("en-US", options);
 }
 
 // Helper functions
@@ -140,28 +140,27 @@ function appendZeros(number) {
   }
 
   return `${number}`;
-};
-
+}
 
 /* === Dynamic modal === */
-var modalTitle = document.querySelector('.modal-title');
+var modalTitle = document.querySelector(".modal-title");
 
-$('.modalMemory').on('click',function(){
-  var newTitle = this.getAttribute('data-title');
-  var newContent = this.getAttribute('data-content');
+$(".modalMemory").on("click", function () {
+  var newTitle = this.getAttribute("data-title");
+  var newContent = this.getAttribute("data-content");
 
   modalTitle.innerHTML = newTitle;
-  $('.modal-body').load('memories/' + newContent + '.html',function(){
-    $('#myModal').modal({show:true});
+  $(".modal-body").load("memories/" + newContent + ".html", function () {
+    $("#memoryModal").modal({ show: true });
   });
 });
 
 /* === Lenis smooth-scrol === */
-const lenis = new Lenis();
+// const lenis = new Lenis();
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
 
-requestAnimationFrame(raf);
+// requestAnimationFrame(raf);
